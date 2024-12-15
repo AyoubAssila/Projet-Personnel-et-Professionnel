@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="login.jpg">
+    <link rel="stylesheet" href="csslogin.css">
+    <script src="jslogin.js"></script>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="header-left">
+            <a href="page principale.html"><img src="TP1.png" alt="Logo" width="60" height="60"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h1>École Supérieure des Sciences Économiques et Commerciales de Tunis</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <nav>
+            <div class="nav-links">
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="Home.html">Home</a>&nbsp;&nbsp;
+                <a href="formation.html">Formation</a>&nbsp;&nbsp;
+                <a href="ressource.html">Ressources</a>&nbsp;&nbsp;
+                <a href="pde.html">Plan d'Etudes</a>&nbsp;&nbsp;
+                <a href="events.html">Evennements</a>&nbsp;&nbsp;
+                <a href="Contact.html">Contact</a>&nbsp;&nbsp;
+                <a href="seconnecter.html">Connexion</a>&nbsp;&nbsp;
+            </div>
+        </nav>
+    </header>
+    <h1>Bienvenue à L'ESSECT</h1>
+    <img src="essect.jpg" alt="ESSECT" width="500" height="500">
+    <fieldset>
+        <legend>Inscription à l'ESSECT</legend>
+        <form action="#" method="get" onsubmit="return verif()">
+            <label for="name">Nom *</label>
+            <input type="text" id="name" name="name" required placeholder="Entrez votre Nom SVP" title="Veuillez reseigner ce champ"><br>
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre Prénom SVP" title="Veuillez reseigner ce champ"><br>
+            <label for="date">Date de Naissance</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="annbac">Année du bac *</label>
+            <input type="text" id="annbac" name="annbac" required placeholder="Entrez votre année du bac SVP" title="Veuillez reseigner ce champ"><br>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="Entrez votre Email SVP" title="Veuillez respecter le format de l'e-mail"><br>
+            <label for="password">Mot De Passe *</label>
+            <input type="password" id="password" name="password" required placeholder="Entrez votre Mot de Passe SVP" title="Veuillez reseigner ce champ"><br>            
+            <label for="confirm_password">Confirmer Mot De Passe *</label>
+            <input type="password" id="confirm_password" name="confirm_password" required placeholder="Entrez votre Mot de Passe SVP" title="Veuillez reseigner ce champ" oninput="verifpass()"><br>
+            <input type="submit" value="Envoyer" onclick="verif()">
+            <input type="reset" value="Annuler" onclick="annuler()">
+        </form>
+    </fieldset>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>L'Ecole</h3>
+                <ul>
+                    <a href="objectif.html"><li>Objectifs</li></a>
+                    <a href="infra.html"><li>Infrastructure</li></a>
+                    <a href="stat.html"><li>En chiffres</li></a>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Espace étudiant</h3>
+                <ul>
+                    <a href="regetude.html"><li>Régime des études</li></a>
+                    <a href="LA.html"><li>Licences appliquées</li></a>
+                    <a href="LF.html"><li>Licences fondamentales</li></a>
+                    <a href="master de recherche.html"><li>Masters de recherche</li></a>
+                    <a href="mpro.html"><li>Masters professionnels</li></a>
+                    <a href="clubs.html"><li>Clubs de l'Essect</li></a>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Espace enseignant</h3>
+                <ul>
+                    <li><a href="depeco.html">Département Economie</a></li>
+                    <li><a href="depfinan.html">Département Finance et Comptabilité</a></li>
+                    <li><a href="depges.html">Département Gestion</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Réseaux sociaux</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/essec.tunis"><img src="fcb.webp" alt="Facebook" width="20px" height="20px"></a></li>
+                    <li><a href="https://x.com/essect_officiel?mx=2"><img src="x.jpg" alt="X" width="20px" height="20px"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

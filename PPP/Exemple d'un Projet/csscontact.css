@@ -1,0 +1,279 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-image: linear-gradient(
+        to right,
+        #e3f2fd,  /* Bleu clair */
+        #f1f8e9,  /* Vert clair */
+        #ffecb8   /* Jaune clair */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: color-shift 4s infinite linear;
+}
+
+/* Animation pour le titre */
+@keyframes color-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Header */
+header {
+    background-color: black; /* Conserve le fond noir */
+    color: white; /* Conserve le texte en blanc */
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column; /* Les éléments sont empilés verticalement */
+    align-items: center; /* Centre horizontalement les éléments */
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ajoute une ombre subtile sous le header */
+}
+
+/* Image et texte alignés horizontalement */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute; /* Place l'image et le texte à gauche */
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.header-left a img {
+    width: 100px; /* Taille de l'image */
+    height: 100px;
+    border-radius: 10px; /* Ajoute des bords arrondis à l'image */
+    transition: transform 0.3s ease; /* Ajoute une animation sur l'image */
+}
+
+.header-left a img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+}
+
+/* Titre dans le header */
+header h1 {
+    margin: 0;
+    font-size: 16px; /* Taille légèrement augmentée */
+    text-align: center; /* Centre le texte horizontalement */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Accentue l'espacement entre les lettres */
+    margin-bottom: 40px; /* Espace sous le titre */
+    background: linear-gradient(90deg, #fff, #ccc);
+    -webkit-background-clip: text; /* Clippe le dégradé au texte uniquement */
+    -webkit-text-fill-color: transparent; /* Rend le fond du texte transparent */
+    animation: color-shift 3s infinite linear; /* Animation du dégradé */
+}
+
+/* Navigation */
+nav {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Style des liens de navigation */
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    margin: 5px auto 0;
+}
+
+nav a:hover {
+    color: #ddd;
+    transform: translateY(-3px); /* Soulève légèrement le lien */
+}
+
+nav a:hover::after {
+    width: 100%; /* Ajoute une ligne animée sous le lien au survol */
+}
+
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Espacement et taille des champs de formulaire */
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus sur les champs */
+input:focus, select:focus, textarea:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+/* Bouton envoyer */
+input[type="submit"] {
+    font-size: 18px;
+    color: white;
+    background-color: #0066cc;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #004a99;
+}
+
+/* Conteneur des images */
+div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Images */
+.image1, .image2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraphe des informations */
+.contact-info {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Liens dans contact-info */
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
+    position: relative; /* Position normale */
+    background-color: black; /* Fond noir pour le footer */
+    color: white; /* Texte en couleur blanche */
+    padding: 8px 15px; /* Espacement autour du contenu */
+    font-size: 12px; /* Taille de police plus petite */
+    margin-top: 20px; /* Espace au-dessus */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between; /* Équilibre les sections */
+    width: 100%; 
+    max-width: 1200px; /* Limite la largeur pour les écrans larges */
+}
+
+footer .footer-section {
+    display: flex;
+    flex-direction: column; /* Empile les liens en colonne */
+    margin-right: 20px; /* Espacement entre sections */
+}
+
+footer .footer-section h3 {
+    font-size: 16px; 
+    margin-bottom: 10px;
+}
+
+footer .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-section ul li {
+    margin-bottom: 5px;
+}
+
+footer .footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-section a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+/* Contenu de la page principale */
+main {
+    padding: 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrer le contenu */
+}
+
+/* Suppression des marges par défaut */
+h1, p {
+    margin: 0;
+}
+body h2{
+    text-align: center;
+    font-size: 50px;
+    color: #0066cc;
+}

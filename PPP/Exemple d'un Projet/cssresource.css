@@ -1,0 +1,206 @@
+/* Header */
+header {
+    background-color: black; /* Conserve le fond noir */
+    color: white; /* Conserve le texte en blanc */
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column; /* Les éléments sont empilés verticalement */
+    align-items: center; /* Centre horizontalement les éléments */
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ajoute une ombre subtile sous le header */
+}
+
+/* Image et texte alignés horizontalement */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute; /* Place l'image et le texte à gauche */
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.header-left a img {
+    width: 100px; /* Taille de l'image */
+    height: 100px;
+    border-radius: 10px; /* Ajoute des bords arrondis à l'image */
+    transition: transform 0.3s ease; /* Ajoute une animation sur l'image */
+}
+
+.header-left a img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+}
+
+/* Titre dans le header */
+header h1 {
+    margin: 0;
+    font-size: 16px; /* Taille légèrement augmentée */
+    text-align: center; /* Centre le texte horizontalement */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Accentue l'espacement entre les lettres */
+    margin-bottom: 40px; /* Espace sous le titre */
+    background: linear-gradient(90deg, #fff, #ccc);
+    -webkit-background-clip: text; /* Clippe le dégradé au texte uniquement */
+    -webkit-text-fill-color: transparent; /* Rend le fond du texte transparent */
+    animation: color-shift 3s infinite linear; /* Animation du dégradé */
+}
+
+/* Navigation */
+nav {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Style des liens de navigation */
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    margin: 5px auto 0;
+}
+
+nav a:hover {
+    color: #ddd;
+    transform: translateY(-3px); /* Soulève légèrement le lien */
+}
+
+nav a:hover::after {
+    width: 100%; /* Ajoute une ligne animée sous le lien au survol */
+}
+
+/* Animation pour le titre h1 */
+@keyframes color-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Footer */
+footer {
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
+    position: relative; /* Position normale (pas fixe) */
+    background-color: black; /* Fond noir pour le footer */
+    color: white; /* Texte en couleur blanche */
+    padding: 8px 15px; /* Espacement autour du contenu */
+    font-size: 12px; /* Taille de police plus petite */
+    margin-top: 20px; /* Ajoute un peu d'espace au-dessus du footer */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
+}
+
+footer .footer-container {
+    display: flex; /* Utilisation de Flexbox dans le container */
+    justify-content: space-between; /* Espacement égal entre les sections */
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: 1200px; /* Limite la largeur pour les grands écrans */
+}
+
+footer .footer-section {
+    display: flex; /* Permet aux éléments dans chaque section de s'afficher horizontalement */
+    flex-direction: column; /* Garde les liens en colonne à l'intérieur de chaque section */
+    margin-right: 20px; /* Espacement entre les sections */
+}
+
+footer .footer-section h3 {
+    font-size: 16px; /* Taille de la police du titre des sections */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+footer .footer-section ul {
+    list-style: none; /* Retirer les puces des listes */
+    padding: 0; /* Retirer le padding des listes */
+    margin: 0; /* Retirer les marges des listes */
+}
+
+footer .footer-section ul li {
+    margin-bottom: 5px; /* Espacement entre les éléments de la liste */
+}
+
+footer .footer-section a {
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Retirer le soulignement des liens */
+}
+
+footer .footer-section a:hover {
+    color: #ddd; /* Changer la couleur au survol */
+    text-decoration: underline; /* Souligner au survol */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.document {
+    width: 80%;
+    margin: 30px auto; /* Centre la section */
+    padding: 20px;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+.document h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.document h2 {
+    font-size: 22px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.document p {
+    font-size: 16px;
+    line-height: 1.6; /* Améliore la lisibilité */
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.document a {
+    display: block; /* Chaque lien sur une nouvelle ligne */
+    font-size: 16px;
+    color: #3498db; /* Couleur bleue */
+    text-decoration: none; /* Supprime le soulignement */
+    margin: 8px 0;
+    transition: color 0.3s, transform 0.2s; /* Animation pour le survol */
+}
+
+.document a:hover {
+    color: #1abc9c; /* Couleur verte au survol */
+    transform: translateX(5px); /* Légère translation au survol */
+}
+
+
+.document a::before {
+    content: "📄 "; /* Icône devant chaque lien */
+}
+
+.document br {
+    display: none; /* Supprime les sauts de ligne inutiles */
+}
